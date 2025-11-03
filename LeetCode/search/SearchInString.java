@@ -1,9 +1,12 @@
 package search;
 
+import java.util.Arrays;
+
 public class SearchInString {
     public static void main(String[] args) {
         String str =  "Nayab";
         char search = 'a';
+        System.out.println(Arrays.toString(str.toCharArray()));
         System.out.println(search2(str , search));
     }
     static boolean search(String str , char ch){
