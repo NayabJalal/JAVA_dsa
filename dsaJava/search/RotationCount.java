@@ -1,5 +1,15 @@
 package search;
-public class PivotAndNONPivot {
+
+import java.util.Arrays;
+
+public class RotationCount {
+    public static void main(String[] args) {
+        int[] arr = {4,5,6,7,1,2,3};
+        int ans = isPivot(arr);
+        int ans2 = isNotPivot(arr);
+        System.out.println(ans);
+        System.out.println(ans2);
+    }
     static int isPivot(int[] arr) {
         int start = 0, end = arr.length - 1;
 
@@ -13,9 +23,10 @@ public class PivotAndNONPivot {
                 end = mid;
             }
         }
-        return arr[start]; // or end
+        return start+1; //{start+1} or the index of minimum num in the arr = index of 1 -> {4,5,6,7,1,2,3}
     }
-     static int isNotPivot(int[] arr) {
+    //the index of minimum num in the arr = index of 1 -> {4,5,6,7,1,2,3}
+    static int isNotPivot(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
         while (start < end) {
@@ -28,15 +39,6 @@ public class PivotAndNONPivot {
                 end = mid;
             }
         }
-        return arr[start]; //or end
-    }
-    public static void main(String[] args) {
-        int[] arr = {4,5,6,7,1,2,3};
-
-        int peakByStartCompare = isPivot(arr);
-        int peakByEndCompare   = isNotPivot(arr);
-
-        System.out.println(peakByStartCompare);
-        System.out.println(peakByEndCompare);
+        return start; //or end
     }
 }
