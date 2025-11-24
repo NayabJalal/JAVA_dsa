@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/A2Z_DSA" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DSA_book" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dsaJava" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/strivers" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
