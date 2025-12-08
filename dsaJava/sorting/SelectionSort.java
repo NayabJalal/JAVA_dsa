@@ -2,7 +2,7 @@ package sorting;
 
 import java.util.Arrays;
 
-public class Selection {
+public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {3,1,2,5,4};
         selection(arr);
