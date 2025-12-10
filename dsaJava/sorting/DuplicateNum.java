@@ -2,9 +2,11 @@ package sorting;
 
 public class DuplicateNum {
     public static void main(String[] args) {
-
+        int[] arr = {1,3,4,2,2};
+        cyclicSort(arr);
+        System.out.println(findDuplicate(arr));
     }
-    public int findDuplicate(int[] nums) {
+    static int findDuplicate(int[] nums) {
         cyclicSort(nums);
         for (int i = 0; i < nums.length-1; i++) {
             if (nums[i]!=i+1){
