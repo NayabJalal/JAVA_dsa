@@ -1,8 +1,11 @@
 package string;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Basic {
     public static void main(String[] args) {
-        String name = "Nayab";
+        //String name = "Nayab";
         /*
         String changedName= name.toUpperCase();
         System.out.println(changedName);
@@ -40,9 +43,37 @@ public class Basic {
 
 
 */
+        String a = "Nayab";
+        String b = "Nayab";
+        System.out.println(a==b); // true cuz pointing to the same obj in the StringPool;
+        String a1 = "Nayab";
+        System.out.println(a1==a);//true
+        String a2 = new String("Nayab");
+        System.out.println(a2==a1);// false cuz it is creating values outside the pool but in heap
 
-        String modifiedName =  "nayabayab";
-        System.out.println(modifiedName.indexOf("ab",4));
+        // use equals() instead of == in String.
+        System.out.println(a2.equals(a1));// true, it only checks the values
+//        String modifiedName =  "nayabayab";
+//        System.out.println(modifiedName.indexOf("ab",4));
+        String ans = new Integer(57) + "" + new ArrayList<>();
+        System.out.println(ans);
+
+        //Performance of String--
+        String series = "";
+        for (int i = 0; i < 26; i++) {
+            char ch = (char) ('a' + i);
+//            System.out.println(ch);
+            series = series + ch;
+        }
+        System.out.println(series);
+        System.out.println("a" + 'b'); // -> ab
+        StringBuilder sb = new StringBuilder("Happy");
+        sb.append(" New Year");
+        sb.append('!');
+        sb.append(2025);
+        String hehe = sb.toString();
+        System.out.println(hehe);
+        System.out.println(Arrays.toString(hehe.split("N")));
 
     }
 }
